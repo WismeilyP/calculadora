@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css.css" />
+    <title>Calculadora</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div 
+      id="calculator"
+    > 
+
+    <!--- <h2 class="him">Axl ♥</h2> ---> 
+
+        <input
+          type="string" 
+          class="calculator-input" 
+          v-model="value" 
+          placeholder=0
+          @keyup.enter="getResult()"
+          
+        >
+    
+        <div 
+          class="calculadora-content one"
+        >
+          <div 
+            class="col"
+          >
+            <button
+              class="calculator-btn action color d red" 
+              @click="clear()"
+            >AC</button>
+          </div>
+          <div 
+            class="col"
+          >
+            <button
+              class="calculator-btn action color d"
+              @click="del()"
+            >DEL</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn action color s green" 
+              @click="addSigno_('/')"
+              value="/"
+            >÷</button>
+          </div>
+        </div>
+        <div
+          class="calculadora-content two"
+        >
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(7)"
+            >7</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(8)"
+            >8</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button 
+              class="calculator-btn" 
+              @click="addSigno(9)"
+            >9</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn action color s yellow" 
+              @click="addSigno_('*')"
+            >x</button>
+          </div>
+        </div>
+        <div
+          class="calculadora-content "
+        >
+          <div
+            class="col"
+          >
+            <button 
+              class="calculator-btn" 
+              @click="addSigno(4)"
+            >4</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button 
+              class="calculator-btn"
+              @click="addSigno(5)"
+            >5</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(6)"
+            >6</button>
+          </div>
+          <div 
+            class="col"
+          >
+            <button
+                class="calculator-btn action color s red" 
+                @click="addSigno_('-')"
+            >-</button>
+          </div>
+        </div>
+        <div
+          class="calculadora-content" 
+        >
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(1)"
+            >1</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(2)"
+            >2</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(3)"
+            >3</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn action color s blue" 
+              @click="addSigno_('+')"
+            >+</button>
+          </div>
+        </div>
+        <div
+          class="calculadora-content"
+        >
+          <div
+            class="col wide"
+          >
+            <button
+              class="calculator-btn" 
+              @click="addSigno(0)"
+            >0</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button 
+              class="calculator-btn action"
+              @click="addSigno('.')"
+            >.</button>
+          </div>
+          <div
+            class="col"
+          >
+            <button
+              class="calculator-btn action resultado" 
+              @click="getResult()"
+            >=</button>
+          </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>
